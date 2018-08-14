@@ -6,24 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent  {
+export class AppComponent {
+  searchQuery:any = '' ;
+  searchEngine:any;
+  url:any;
 
-          searchQuery:any = "" ;
-
-          searchEngine :any;
-
-          url:any;
-  
-      onChange(searchEngine) {
-
-          this.url = searchEngine + this.searchQuery;
- 
+  onChange(searchEngine) {
+    this.url = searchEngine + this.searchQuery;
   }
-  
-     redirectAndSearch() {
-    
+
+  redirectAndSearch() {
     window.open(this.url);
-      
   }
 }
   
